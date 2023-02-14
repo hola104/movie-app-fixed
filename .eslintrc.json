@@ -1,0 +1,95 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "airbnb", 
+    "prettier"
+  ],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "import"],
+  "rules": {
+    "indent": ["error", 2],
+    "prettier/prettier": 0,
+    "linebreak-style": [0, "unix"],
+    "quotes": 0,
+    "semi": 0,
+    "no-console": "off",
+    "camelcase":"off",
+    "no-return-await": "off",
+    "no-throw-literal": "off",
+    "dot-notation": "off",
+    "arrow-body-style": "off",
+    "class-methods-use-this":"off",
+    "consistent-return":"off",
+    "no-underscore-dangle":"off",
+    "no-unused-expressions": "off",
+    "lines-between-class-members":"off",
+    "no-unused-vars": "warn",
+    "no-alert":"off",
+    "object-shorthand": "off",
+    "prefer-const": "off",
+    "eqeqeq":"off",
+    "array-callback-return":"off",
+    "react/static-property-placement":"off",
+    "react/sort-comp": "off",
+    "react/forbid-prop-types": "off",
+    "react/no-access-state-in-setstate": "off",
+    "react/destructuring-assignment": "off",
+    "react/state-in-constructor": "off",
+    "react/no-unused-state": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": 0,
+    "react/prefer-stateless-function": "off",
+    "react/jsx-pascal-case": 2,
+    "react/function-component-definition": "off",
+    "react/jsx-boolean-value": 2,
+    "react/jsx-closing-bracket-location": 2,
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "jsx-a11y/no-autofocus": "off",
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": ["CustomInputLabel"],
+        "labelAttributes": ["label"],
+        "controlComponents": ["CustomButton"],
+        "ignoreElements": ["button"],
+        "depth": 3
+      }
+    ],
+    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-plusplus": 0,
+    "import/order": [
+      2,
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always"
+      }
+    ]
+  }
+}
