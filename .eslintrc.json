@@ -27,6 +27,7 @@
     "no-console": "off",
     "camelcase":"off",
     "no-return-await": "off",
+    "import/no-extraneous-dependencies": "off",
     "no-throw-literal": "off",
     "dot-notation": "off",
     "arrow-body-style": "off",
