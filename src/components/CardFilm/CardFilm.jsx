@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 
 import { Consumer } from "../AppContext";
 
+import noImage from "./noimage.jpg";
+
 import "./CardFilm.css";
 
 export default class CardFilm extends Component {
@@ -57,7 +59,7 @@ export default class CardFilm extends Component {
   };
   _cardDescMobil = {
     width: "100%",
-    margin: "-20px 0 9px 60px",
+    margin: "-20px 0 15px 0",
   };
 
   _stars = {
@@ -87,14 +89,28 @@ export default class CardFilm extends Component {
     }
   };
 
+  // posterPath = (poster) => {
+  //   return poster ? (
+  //     // eslint-disable-next-line jsx-a11y/alt-text
+  //     <img
+  //       className="film-image"
+  //       src={`https://image.tmdb.org/t/p/w500${poster}`}
+  //     />
+  //   ) : null;
+  // };
+
   posterPath = (poster) => {
-    return poster ? (
-      // eslint-disable-next-line jsx-a11y/alt-text
-      <img
-        className="film-image"
-        src={`https://image.tmdb.org/t/p/w500${poster}`}
-      />
-    ) : null;
+    if (poster) {
+      return (
+        // eslint-disable-next-line jsx-a11y/alt-text
+        <img
+          className="film-image"
+          src={`https://image.tmdb.org/t/p/w500${poster}`}
+        />
+      );
+    }
+    // eslint-disable-next-line jsx-a11y/alt-text
+    return <img className="film-image" src={noImage} />;
   };
 
   releaseDate = (date) => {

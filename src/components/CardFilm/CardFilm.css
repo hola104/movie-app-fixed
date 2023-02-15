@@ -18,24 +18,21 @@
   border-radius: 8px;
 }
 
-.ant-card-meta-title:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
 .ant-card {
-  transition-duration: 0.08s;
+  transition-duration: 0.07s;
 }
 .ant-card:hover {
-  scale: 1.05;
+  cursor: pointer;
+  scale: 1.02;
   outline: 2px #fadb14 solid;
-  transition-duration: 0.08s;
+  transition-duration: 0.07s;
 }
 
 .card-body {
   height: 100%;
   width: 231px;
   margin: 0 9px 0 180px;
-  cursor: default;
+  /* cursor: default; */
   font-family: Inter;
   font-style: normal;
   font-weight: 400px;
@@ -107,11 +104,27 @@
 }
 
 @media screen and (max-width: 521px) {
-  .film-image {
+  /* .film-image {
     width: 60px;
     height: 91px;
     top: 6px;
     left: 10px;
+  } */
+  .film-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 28px;
+  }
+
+  .ant-card:hover {
+    outline: 2px #fadb14 solid;
+    transition-duration: 0.08s;
+  }
+
+  .rate-text {
+    top: 6px;
+    z-index: 100;
   }
 
   .list-genre {
@@ -139,12 +152,12 @@
   :where(.css-dev-only-do-not-override-1jyprxx).ant-card .ant-card-meta-title {
     color: rgba(0, 0, 0, 0.88);
     font-weight: 600;
-    /* font-size: 16px; */
+    font-size: 16px;
     overflow: hidden;
     /* white-space: nowrap; */
     text-overflow: inherit;
 
-    /* max-width: 179px; */
+    max-width: 100%;
   }
 
   :where(.css-dev-only-do-not-override-1jyprxx).ant-card-bordered {
@@ -165,10 +178,11 @@
   }
 
   .list-genre {
-    margin-left: 75px;
+    margin-left: 15px;
+    z-index: 1000;
   }
 
-  .rate-text {
-    top: 5px;
-  }
+  /* .rate-text {
+    top: 6px;
+  } */
 }

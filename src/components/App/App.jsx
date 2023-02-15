@@ -9,7 +9,6 @@ import ErrorMessage from "../ErrorMessage";
 import Paginator from "../Pagination";
 import TabsMovies from "../TabsMovies";
 
-// import 'antd/dist/antd.css';
 import "../../css/styles.css";
 import "./App.css";
 
@@ -64,14 +63,14 @@ export default class App extends Component {
   // список жанров
   mapGenres = new Map();
 
-  // объект для хранения выборки фильмов, полученных с сервера
+  // объект для хранения фильмов, полученных с сервера
   onlineData = {
     listMovies: [],
     totalResults: 0,
     currentPage: 1,
   };
 
-  // слушатель доступности интернет
+  // слушатель доступности интернета
   internetListener(event) {
     if (event.type === "offline") {
       this.setState({ online: false, error: "Error: No internet connection" });
@@ -81,7 +80,7 @@ export default class App extends Component {
   }
   internetError = this.internetListener.bind(this);
 
-  // Получаем ID гостевой сессии
+  // получаем ID гостевой сессии
   getSessionId() {
     let flag = true;
     if (this.state.session.expire) {
@@ -201,7 +200,7 @@ export default class App extends Component {
       });
   };
 
-  // обрезаем текст до 35 слов
+  // обрезаем текст
   shortDescription(desc) {
     const words = desc.split(" ");
     let str = words.slice(0, 25).join(" ");
@@ -223,7 +222,7 @@ export default class App extends Component {
     return arr.slice(start, end);
   }
 
-  // слушатель изменения страница
+  // слушатель изменения страницы
   onChangePage = (page) => {
     if (!this.state.tabRated) {
       this.setState({ currentPage: page });
