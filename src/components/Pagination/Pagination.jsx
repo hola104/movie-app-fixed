@@ -13,6 +13,7 @@ const Paginator = ({ total, current, onChange }) => {
         current={current}
         pageSize={20}
         showSizeChanger={false}
+        hideOnSinglePage
       />
     </div>
   );

@@ -17,3 +17,7 @@
 .ant-tabs-tab-btn {
   padding: 0 10px;
 }
+
+:where(.css-1jyprxx).ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+  margin: 0;
+}
